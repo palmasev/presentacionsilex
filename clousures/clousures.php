@@ -26,5 +26,14 @@ for($i=1; $i<6; $i++){
 	echo "\nLa tercera parte de la mitad de $i es: ".aLaMitadHacerOperacion($i, function($x){
 		return $x*3;
 	});
-}	
+}
+
+//Cuidado con el ámbito de las variables.
+
+$numero = 3;
+$multiplicaXnumero = function($x) use ($numero){
+	return $x*$numero;
+}
+
+
 ?>
